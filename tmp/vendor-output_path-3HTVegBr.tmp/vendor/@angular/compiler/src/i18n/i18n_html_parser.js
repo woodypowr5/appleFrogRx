@@ -1,0 +1,1 @@
+/Users/home/Desktop/projects/appleFrogRx/tmp/vendor-input_base_path-IFRDZqak.tmp/0/@angular/compiler/src/i18n/i18n_html_parser.js
