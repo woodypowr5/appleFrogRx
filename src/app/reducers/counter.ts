@@ -1,5 +1,6 @@
 import { ActionReducer, Action } from '@ngrx/store';
 
+
 /*
     Default parameter will be used for initial state unless initial
     state is provided for this reducer in 'provideStore' method.
