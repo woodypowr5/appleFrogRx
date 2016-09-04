@@ -1,0 +1,37 @@
+Given: 
+
+export const items = (state = [], action) => {
+  switch(action.type){
+
+
+  // to ADD an item:
+
+  	return [
+  			...state, 
+  			Object.assign(
+  				{}, 
+  				{ 
+  					id: action.payload.id
+  					name: action.payload.name,
+  					otherParam: initValue
+  					etc..
+  				}
+  		]
+  	);
+
+  // to REMOVE an item:
+
+  	return state.filter(item => item.id !== action.payload);
+
+  // 
+
+
+
+  	-- or --
+
+  // PASS THROUGH to another reducer hadling the inner details of the item itself or some parmeter of the item:
+
+  	return state.map(item => itemdetails(item, action));
+   
+}
+
