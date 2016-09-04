@@ -10,6 +10,7 @@ export const counter: ActionReducer<number> = (state: number = 0, action: Action
 	switch(action){
 
 		default:
+			// console.log(this);
 			return state;
 	}
 }; 
