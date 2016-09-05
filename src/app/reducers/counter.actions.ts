@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
-// will need to import counter if counter properties are added and altered
 
 @Injectable()
 export class counterActions {
