@@ -1,17 +1,21 @@
 import { ActionReducer, Action } from '@ngrx/store';
 import { counterActions } from './counter.actions';
 
-/*
-    Default parameter will be used for initial state unless initial
-    state is provided for this reducer in 'provideStore' method.
-*/
 
-export const counter: ActionReducer<number> = (state: number = 0, action: Action) => {
+export * from './counter.actions';
+
+export interface counterState{
+    value: number
+}
+let initialCounterState: counterState = {
+    value: 0
+}
+export const counter: ActionReducer<counterState> = (state: counterState = initialCounterState, action: Action) => {
     switch(action.type){
-        case 'INCREMENT':
-            return state + 1;
-        case 'DECREMENT':
-            return state - 1;
+        case counterActions.INCREMENT:
+            return Object.assign({}, state, {value: state.value+1});
+        case counterActions.DECREMENT:
+            return Object.assign({}, state, {value: state.value-1});
         default:
             return state;
     }

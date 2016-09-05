@@ -7,13 +7,13 @@ export class counterActions {
   static INCREMENT = 'INCREMENT';
   increment(): Action  {
     return {
-      type: CounterActions.INCREMENT
+      type: counterActions.INCREMENT
     }
   }
   static DECREMENT = 'DECREMENT';
   decrement(): Action  {
     return {
-      type: CounterActions.DECREMENT
+      type: counterActions.DECREMENT
     }
   }
 }
