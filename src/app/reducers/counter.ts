@@ -1,5 +1,5 @@
 import { ActionReducer, Action } from '@ngrx/store';
-
+import { counterActions } from './counter.actions';
 
 /*
     Default parameter will be used for initial state unless initial
