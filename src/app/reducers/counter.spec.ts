@@ -20,4 +20,16 @@ describe('The Counter Reducer', () => {
         const expected = state;
         expect(actual).toBe(expected);
     });
+    it('should add 1 to state.value when INCREMENT action is dispatched', () => {
+        const state = Object.assign({}, mockedState);
+        const actual = counter(state, {type: counterActions.INCREMENT});
+        const expected = state;
+        expect(actual.value).toBe(1);
+    });
+    it('should subtract 1 from state.value when DECREMENT action is dispatched', () => {
+        const state = Object.assign({}, mockedState);
+        const actual = counter(state, {type: counterActions.DECREMENT});
+        const expected = state;
+        expect(actual.value).toBe(-1);
+    });
 });    
