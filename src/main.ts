@@ -8,7 +8,7 @@ import { Store, provideStore } from '@ngrx/store';
 
 
 // Reducers
-import { counterReducer } from './app/reducers/counter.reducer';
+import { counterReducer } from './app/store/counter/counter.reducer';
 
 if (environment.production) {
   enableProdMode();
