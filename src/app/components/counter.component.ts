@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 // @Ngrx stuff
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { counterState, counter } from '../reducers/counter';
+import { counterState, counterReducer } from '../reducers/counter.reducer';
 import { counterActions } from '../reducers/counter.actions';
 // import { Injectable } from '@angular/core';
 
@@ -25,7 +25,7 @@ export class CounterComponent{
     counter$: Observable<counterState>;
 
     constructor(private store: Store<counterState>){
-        this.counter$ = this.store.select('counter');
+        this.counter$ = this.store.select('counterReducer');
     }
    
     increment(){

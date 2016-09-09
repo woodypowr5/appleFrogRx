@@ -8,7 +8,7 @@ import { Store, provideStore } from '@ngrx/store';
 
 
 // Reducers
-import { counter } from './app/reducers/counter';
+import { counterReducer } from './app/reducers/counter.reducer';
 
 if (environment.production) {
   enableProdMode();
@@ -16,6 +16,6 @@ if (environment.production) {
 
 bootstrap(AppComponent, 
 	[
-		provideStore({counter})
+		provideStore({counterReducer})
 	]
 );
