@@ -1,21 +1,19 @@
 import { ActionReducer, Action } from '@ngrx/store';
-import { counterActions } from './counter.actions';
+import { profileActions } from './profile.actions';
 import { Injectable } from '@angular/core';
 
-export * from './counter.actions';
+export * from './profile.actions';
 
-export interface counterState{
-    value: number
+export interface profileState{
+    name: string
 }
-let initialCounterState: counterState = {
-    value: 0
+let initialProfileState: profileState = {
+    name: "null"
 }
-export const counterReducer: ActionReducer<counterState> = (state: counterState = initialCounterState, action: Action) => {
+export const profileReducer: ActionReducer<profileState> = (state: profileState = initialProfileState, action: Action) => {
     switch(action.type){
-        case counterActions.INCREMENT:
-            return Object.assign({}, state, {value: state.value+1});
-        case counterActions.DECREMENT:
-            return Object.assign({}, state, {value: state.value-1});
+    //     case State.CREATE:
+    //         return Object.assign({}, state, {value: state.value+1});
         default:
             return state;
     }
