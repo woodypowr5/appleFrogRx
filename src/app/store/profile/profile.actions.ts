@@ -10,7 +10,7 @@ export class profileActions {
   //     payload: newProfile
   //   }
   // }
- 
+  
 }
 
 
