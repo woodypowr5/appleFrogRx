@@ -18,9 +18,12 @@ const initialState: ProfilesState = {
 
 export const profileReducer: ActionReducer<ProfilesState> = (state: ProfilesState = initialState, action: Action) => {
     switch(action.type){
-    //     case State.CREATE:
-    //         return Object.assign({}, state, {value: state.value+1});
+        case profileActions.GET_BY_ID:
+            // return Object.assign({}, state, {value: state.value+1});
         default:
             return state;
     }
 };
+
+
+

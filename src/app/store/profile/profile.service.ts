@@ -1,13 +1,23 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
+import { Store } from '@ngrx/store';
 
 import { Profile } from '../../models/profile';
+import { ProfilesState, profileReducer } from './profile.reducer';
+import { profileActions } from './profile.actions';
+
 
 @Injectable()
-export class ProfileService {
+export class ProfilesService {
+    
+    // public profiles$: Observable<ProfilesState>;
 
-    // constructor() {
-    // }
+    constructor(private store: Store<ProfilesState>){
+
+    	
+    }
+    
+
 
     // private selectedNeedSource = new Subject<Need>();
 
@@ -16,5 +26,4 @@ export class ProfileService {
     // selectNeed(need:Need) {
     //     this.selectedNeedSource.next(need);
     // }
-
 }
