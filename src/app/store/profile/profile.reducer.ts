@@ -6,19 +6,19 @@ import { profileActions } from './profile.actions';
 
 export * from './profile.actions';
 
-export interface ProfilesState {
+export interface ProfileState {
 	ids: string[];
 	entities: { [id: string]: Profile }
 }
 
-const initialState: ProfilesState = {
+const initialState: ProfileState = {
 	ids: [],
 	entities: {}
 }
 
-export const profileReducer: ActionReducer<ProfilesState> = (state: ProfilesState = initialState, action: Action) => {
+export const profileReducer: ActionReducer<ProfileState> = (state: ProfileState = initialState, action: Action) => {
     switch(action.type){
-        case profileActions.GET_BY_ID:
+        case profileActions.GET_PROFILE:
             // return Object.assign({}, state, {value: state.value+1});
         default:
             return state;

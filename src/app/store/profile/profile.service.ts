@@ -3,27 +3,24 @@ import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 
 import { Profile } from '../../models/profile';
-import { ProfilesState, profileReducer } from './profile.reducer';
+import { ProfileState, profileReducer } from './profile.reducer';
 import { profileActions } from './profile.actions';
 
 
 @Injectable()
-export class ProfilesService {
+export class ProfileService {
     
-    // public profiles$: Observable<ProfilesState>;
+    public profile$: Observable<ProfileState>;
 
-    constructor(private store: Store<ProfilesState>){
-
-    	
+    constructor(private store: Store<ProfileState>){
+	    this.profile$ = this.store.select('profileReducer');
     }
-    
 
 
-    // private selectedNeedSource = new Subject<Need>();
 
-    // selectedNeed$ = this.selectedNeedSource.asObservable();
+    // DISPATCH ACTIONS 
 
-    // selectNeed(need:Need) {
-    //     this.selectedNeedSource.next(need);
+    // get_by_id(id){
+    //     this.store.dispatch({type: profileActions.GET_BY_ID});
     // }
 }

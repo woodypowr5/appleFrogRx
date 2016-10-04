@@ -3,13 +3,30 @@ import { Action } from '@ngrx/store';
 
 @Injectable()
 export class profileActions {
-  static GET_BY_ID = 'GET_BY_ID';
-  get_by_id(id): Action  {
-    return {
-      type: profileActions.GET_BY_ID,
+
+  	static GET_PROFILE = 'GET_PROFILE';
+  	GET_PROFILE(id: string): Action  {
+    	return {
+      		type: profileActions.GET_PROFILE
     
-    }
-  }
+    	}
+  	}
+
+  	static GET_PROFILE_SUCCESS = 'GET_PROFILE_SUCCESS';
+  	GET_PROFILE_SUCCESS(id: string): Action  {
+    	return {
+      		type: profileActions.GET_PROFILE_SUCCESS
+    
+    	}
+  	}
+
+  	static GET_PROFILE_FAILURE = 'GET_PROFILE_FAILURE';
+  	GET_PROFILE_FAILURE(id: string): Action  {
+    	return {
+      		type: profileActions.GET_PROFILE_FAILURE
+    
+    	}
+  	}
 }
 
 
