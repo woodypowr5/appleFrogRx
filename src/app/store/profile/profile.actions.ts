@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
+import { Profile } from '../../models/profile';
 
 @Injectable()
 export class profileActions {
