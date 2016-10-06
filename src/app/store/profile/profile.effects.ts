@@ -5,7 +5,7 @@ import { profileActions } from './profile.actions';
 import { ProfileService } from './profile.service';
 
 @Injectable()
-export class ProfileEffects {
+export class profileEffects {
 	constructor (
 		private update$: Actions,
         private profileActions: profileActions,

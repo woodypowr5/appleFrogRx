@@ -6,19 +6,15 @@ import { profileActions } from './profile.actions';
 
 export * from './profile.actions';
 
-export interface ProfileState {
-	ids: string[];
-	entities: { [id: string]: Profile }
-}
-
+export type ProfileState = Profile;
+	
 const initialState: ProfileState = {
-	ids: [],
-	entities: {}
+	id: 0
 }
 
 export const profileReducer: ActionReducer<ProfileState> = (state: ProfileState = initialState, action: Action) => {
     switch(action.type){
-        case profileActions.GET_PROFILE:
+        case profileActions.GET_PROFILE_SUCCESS:
             // return Object.assign({}, state, {value: state.value+1});
         default:
             return state;
