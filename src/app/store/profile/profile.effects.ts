@@ -19,7 +19,7 @@ export class profileEffects {
 		.ofType('[profile] GET PROFILE')
 		.map<number>(action => action.payload)
 		.switchMap(id => this.svc.getProfile(id))
-		.map(profile => this.profileActions.GET_PROFILE_SUCCESS(profile));
+		.map(res => ({ type: '[profile] GET_PROFILE_SUCCESS', payload: res }));
 }
 
 // @Injectable()
@@ -32,3 +32,4 @@ export class profileEffects {
 // 	@Effect() testEffect$ = this.actions$
 // 	.ofType('')
 // }
+ 

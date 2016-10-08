@@ -13,15 +13,15 @@ export class profileActions {
     	}
   	}
 
-  	static GET_PROFILE_SUCCESS = 'GET_PROFILE_SUCCESS';
+  	static GET_PROFILE_SUCCESS = '[profile] GET_PROFILE_SUCCESS';
   	GET_PROFILE_SUCCESS(profile): Action  {
     	return {
       		type: profileActions.GET_PROFILE_SUCCESS,
-    		payload: profile
+    		  payload: profile
     	}
   	}
 
-  	static GET_PROFILE_FAILURE = 'GET_PROFILE_FAILURE';
+  	static GET_PROFILE_FAILURE = '[profile] GET_PROFILE_FAILURE';
   	GET_PROFILE_FAILURE(id: string): Action  {
     	return {
       		type: profileActions.GET_PROFILE_FAILURE
