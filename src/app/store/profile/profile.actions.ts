@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 import { Profile } from '../../models/profile';
+import "rxjs/Rx";
 
 @Injectable()
 export class profileActions {
@@ -9,15 +10,14 @@ export class profileActions {
   	GET_PROFILE(id: string): Action  {
     	return {
       		type: profileActions.GET_PROFILE
-    
     	}
   	}
 
   	static GET_PROFILE_SUCCESS = 'GET_PROFILE_SUCCESS';
-  	GET_PROFILE_SUCCESS(id: string): Action  {
+  	GET_PROFILE_SUCCESS(profile): Action  {
     	return {
-      		type: profileActions.GET_PROFILE_SUCCESS
-    
+      		type: profileActions.GET_PROFILE_SUCCESS,
+    		payload: profile
     	}
   	}
 

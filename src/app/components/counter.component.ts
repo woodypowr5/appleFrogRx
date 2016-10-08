@@ -8,6 +8,7 @@ import { counterActions } from '../store/counter/counter.actions';
 
 
 
+
 @Component({
     selector: 'counter-component',
     template: `
@@ -25,7 +26,7 @@ export class CounterComponent{
     counter$: Observable<counterState>;
 
     constructor(private store: Store<counterState>){
-        this.counter$ = this.store.select('counterReducer');
+        // this.counter$ = this.store.select('counterReducer');
     }
    
     increment(){
